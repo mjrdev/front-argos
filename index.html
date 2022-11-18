@@ -544,7 +544,7 @@
 						
 							<div id="app" class="col-lg-full">
 								<div class="input-group">
-									<input type="text"  v-model="frutas"  class="form-control br-tl-7 br-bl-7" placeholder="">
+									<input type="text"  v-model="search"  class="form-control br-tl-7 br-bl-7" placeholder="">
 									<div class="input-group-append ">
 										<button type="button" class="btn btn-primary br-tr-7 br-br-7">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -553,8 +553,8 @@
 								</div>
 								<div class="card mt-5 store">
 									<div class="table-responsive">
-										<table class="table card-table table-vcenter">
-											<tr v-for="(item, key) in pessoas" :key="key" @click="showModal">
+										<table class="table card-table table-vcenter"  :pessoas="filterItems" :fields="fields">
+											<tr v-for="(item, key) in filterItems" :key="key"   @click="showModal">
 												<td>{{ item.nome }}</td>
 												<td>{{ item.cpf }}</td>
 												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.status}}</td>
