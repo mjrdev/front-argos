@@ -21,27 +21,56 @@ createApp({
         {
           nome: "Gusta",
           cpf: "383.497.950-34",
-          status: 'visitante'
+          status: 'visitante',
+          bloco: '5A'
         },
         {
           nome: "bruna",
           cpf: "259.171.020-15",
-          status: 'morador'
+          status: 'morador',
+          bloco: '5B'
         },
         {
           nome: "carlos",
           cpf: "464.732.580-60",
-          status: 'visitante'
+          status: 'visitante',
+          bloco: '5C'
         },
         {
-          nome: "joão",
+          nome: "andreza",
           cpf: "464.722.580-60",
-          status: 'morador'
+          status: 'morador',
+          bloco: '5A'
         },
         {
-          nome: "priscila",
+          nome: "marcos",
           cpf: "464.733.530-60",
-          status: 'visitante'
+          status: 'morador',
+          bloco: '5C'
+        },
+        {
+          nome: "jean",
+          cpf: "264.422.580-60",
+          status: 'morador',
+          bloco: '5B'
+        },
+        {
+          nome: "kleber",
+          cpf: "964.233.530-60",
+          status: 'morador',
+          bloco: '5B'
+        },
+        {
+          nome: "klebson",
+          cpf: "664.122.580-60",
+          status: 'morador',
+          bloco: '5A'
+        },
+        {
+          nome: "amanda",
+          cpf: "364.233.530-60",
+          status: 'visitante',
+          bloco: '5C'
         },
       ],
       search: "",
