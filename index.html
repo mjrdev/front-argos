@@ -234,7 +234,8 @@
 												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.status}}</td>
 												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.bloco}}</td>
 												<td class="text-right text-muted d-md-table-cell text-nowrap">
-													<a class="btn btn-success" data-target="#modal-allow" data-toggle="modal"><i class="ion-ios7-plus" ></i>Permitir</a>
+													<i class="fa fa-check text-success" data-target="#modal-allow" data-toggle="modal" style="font-size: 23px; cursor: pointer;">
+                          </i>
 													<span>&nbsp;</span>
 												</td>
 											</tr>
@@ -242,11 +243,11 @@
 
                     <!-- MODALS ITEMS -->
 
-                    <div class="modal show" style="display: none; padding-right: 5px;" aria-modal="true" v-for="(modal, index) in modals" :key="index" :id="'modal-'+index">
+                    <div class="modal show" style="display: none; padding-right: 5px;" aria-modal="true" id="modal-allow">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content modal-content-demo">
                           <div class="modal-header">
-                            <h6 class="modal-title">{{ modal.title }}</h6>
+                            <h6 class="modal-title">Permitir entrada</h6>
                             <button aria-label="Close" class="close" data-dismiss="modal" type="button" >
                               <span aria-hidden="true">×</span></button>
                           </div>
@@ -255,6 +256,41 @@
                           </div>
                           <div class="modal-footer">
                             <button class="btn btn-indigo" type="button">Sim</button> <button class="btn btn-light" data-dismiss="modal" type="button">Fechar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal show" style="display: none; padding-right: 5px;" aria-modal="true" id="modal-add">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content modal-content-demo">
+                          <div class="modal-header">
+                            <h6 class="modal-title">Adicionar pessoa</h6>
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button" >
+                              <span aria-hidden="true">×</span></button>
+                          </div>
+                          <div class="modal-body">
+                            
+                            <form action="" class="form-add">
+
+                              <h5 style="margin: 4px">Nome: </h5>
+                              <input type="text" class="input-add rounded">
+
+                              <h5 style="margin: 4px">CPF: </h5>
+                              <input type="text" class="input-add rounded">
+
+                              <div class="radio-add">
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                                <label for="html" style="margin: 0;">Convidado</label>
+
+                                <input type="radio" id="css" name="fav_language" value="CSS">
+                                <label for="css" style="margin: 0;">Visitante</label>
+                              </div>
+
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn btn-indigo" type="button">Sim</button><button class="btn btn-light" data-dismiss="modal" type="button">Fechar</button>
                           </div>
                         </div>
                       </div>

@@ -9,7 +9,6 @@ createApp({
       pessoas: peoples,
       search: "",
       modals,
-      modalsIDs: ['allow', 'add'],
     };
   },
 
