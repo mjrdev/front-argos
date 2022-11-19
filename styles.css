@@ -1,0 +1,6 @@
+.modal-off {
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  height: 100vh;
+}
