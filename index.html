@@ -230,15 +230,17 @@
 										<!-- ado ado ado quem leu isso aqui é viado !! -->
 										<table class="table card-table table-vcenter" :pessoas="filterItems" :fields="fields">
 											<tr v-for="(item, key) in filterItems" :key="key" @click="showModalPeopleRegistration(key)">
-												<td class="text-center">{{ item.name }}</td>
-												<td class="text-center">{{ item.cpf }}</td>
-												<td class="text-center text-muted d-none d-md-table-cell text-nowrap">{{	item.status	}}</td>
-												<td class="text-center">{{ item.bloco }}</td>
-												<td class="text-center text-muted d-md-table-cell text-nowrap">
-													<i class="fa fa-check text-success" style="font-size:20px; cursor:pointer;" data-target="#modal-allow" data-toggle="modal">
-                          </i>
-												</td>
-											</tr>
+												<div v-if="filterItems != ''">
+													<td class="text-center">{{ item.name }}</td>
+													<td class="text-center">{{ item.cpf }}</td>
+													<td class="text-center text-muted d-none d-md-table-cell text-nowrap">{{ item.status }}</td>
+													<td class="text-center">{{ item.bloco }}</td>
+													<td class="text-center text-muted d-md-table-cell text-nowrap">
+														<i class="fa fa-check text-success" style="font-size:20px; cursor:pointer;" data-target="#modal-allow" data-toggle="modal"></i>
+													</td>
+													<p v-else class="p-1 mt-4" style="text-align:center;">Ops! Nada encontrado...</p>
+												</div>
+												</tr>
 										</table>
 
                     <!-- MODALS ITEMS -->
