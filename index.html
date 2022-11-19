@@ -227,15 +227,15 @@
 								</div>
 								<div class="card mt-5 store">
 									<div class="table-responsive">
+										<!-- ado ado ado quem leu isso aqui é viado !! -->
 										<table class="table card-table table-vcenter" :pessoas="filterItems" :fields="fields">
 											<tr v-for="(item, key) in filterItems" :key="key" @click="showModalPeopleRegistration(key)">
-												<td>{{ item.name }}</td>
-												<td>{{ item.cpf }}</td>
-												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.status}}</td>
-												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.bloco}}</td>
-												<td class="text-right text-muted d-md-table-cell text-nowrap">
-													<a class="btn btn-success" data-target="#modal-allow" data-toggle="modal"><i class="ion-ios7-plus" ></i>Permitir</a>
-													<span>&nbsp;</span>
+												<td class="text-center">{{ item.name }}</td>
+												<td class="text-center">{{ item.cpf }}</td>
+												<td class="text-center text-muted d-none d-md-table-cell text-nowrap">{{	item.status	}}</td>
+												<td class="text-center">{{ item.bloco }}</td>
+												<td class="text-center text-muted d-md-table-cell text-nowrap">
+													<i class="fa fa-check text-success" style="font-size:20px; cursor:pointer;"></i>
 												</td>
 											</tr>
 										</table>
@@ -260,18 +260,6 @@
                       </div>
                     </div>
 										
-									</div>
-									<div class="d-flex p-4 border-top">
-										<ul class="pagination mb-0">
-											<li class="disabled page-item"><a href="#" class="page-link">‹</a></li>
-											<li class="active page-item"><a href="#" class="page-link">1</a></li>
-											<li class="page-item"><a href="#" class="page-link">2</a></li>
-											<li class="page-item"><a href="#" class="page-link">3</a></li>
-											<li class="page-item"><a href="#" class="page-link">4</a></li>
-											<li class="page-item"><a href="#" class="page-link">5</a></li>
-											<li class="page-item"><a href="#" class="page-link">›</a></li>
-											<li class="page-item"><a href="#" class="page-link">»</a></li>
-										</ul>
 									</div>
 								</div>
 							</div>
