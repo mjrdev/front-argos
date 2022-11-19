@@ -557,9 +557,13 @@
 											<tr v-for="(item, key) in filterItems" :key="key"   @click="showModal">
 												<td>{{ item.nome }}</td>
 												<td>{{ item.cpf }}</td>
-												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.status}}</td>
-												<td class="text-right text-muted d-none d-md-table-cell text-nowrap"><a href="#" class="btn btn-success">ex1</a></a></td>
-												<td class="text-left text-muted d-none d-md-table-cell text-nowrap"><a href="#" class="btn btn-warning">ex2</a></td>
+												<td class="text-left text-muted d-none d-md-table-cell text-nowrap">{{item.status}}</td>
+												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.bloco}}</td>
+												<td class="text-right text-muted d-md-table-cell text-nowrap">
+													<a class="btn btn-success"><i class="ion-ios7-plus"></i> Permitir</a>
+													<span>&nbsp;</span>
+													<a class="btn btn-warning"><i class="ion-close-circled"> Remover</i></a>
+												</td>
 											</tr>
 										</table>
 										
