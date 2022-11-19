@@ -1,0 +1,10 @@
+.search {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btn-add {
+  display: flex;
+  align-items: center;
+}

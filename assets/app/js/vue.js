@@ -1,5 +1,6 @@
 const { createApp } = Vue;
 import { peoples, fields } from './datas.js';
+import { modals } from './modals.js';
 
 createApp({
   data() {
@@ -7,7 +8,8 @@ createApp({
       fields: fields,
       pessoas: peoples,
       search: "",
-      modalPeopleRegistration: false
+      modals,
+      modalsIDs: ['allow', 'add'],
     };
   },
 
@@ -16,7 +18,9 @@ createApp({
       this.modalPeopleRegistration = !this.modalPeopleRegistration
     },
 
-
+    callModal(modal) {
+      this.modals[modal]
+    }
   },
 
   computed: {

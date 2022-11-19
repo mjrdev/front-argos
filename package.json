@@ -1,0 +1,11 @@
+{
+  "name": "argos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mjrdev/front-argos.git",
+  "author": "mjrdev <jrgomesdev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev":"browser-sync start -f . --server"
+  }
+}

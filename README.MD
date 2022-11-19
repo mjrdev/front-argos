@@ -2,5 +2,5 @@
 
 #### alterações a serem feitas
 
-. mudar estrutura de pasta dos arquivos
+. mudar estrutura de pasta dos arquivos d
 

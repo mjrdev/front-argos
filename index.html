@@ -41,7 +41,7 @@
 		<link href="plugins/web-fonts/plugin.css" rel="stylesheet" />
 		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./assets/app/css/styles-index.css">
 
 	</head>
 	<body class="light-mode">
@@ -207,8 +207,9 @@
 
 						<!--Page header-->
 						<div class="page-header">
-							<div class="page-leftheader">
-								<h4 class="page-title">Busca</h4>
+							<div class="search">
+								<h4 class="page-title">Buscar</h4>       
+                <a class="btn btn-primary btn-add" data-target="#modal-add" data-toggle="modal" href="">Adicionar pessoa</a>
 							</div>
 						</div>
 						<!--End Page header-->
@@ -217,7 +218,7 @@
 						
 							<div id="app" class="col-lg-full">
 								<div class="input-group">
-									<input type="text"  v-model="search"  class="form-control br-tl-7 br-bl-7" placeholder="">
+									<input type="text"  v-model="search" class="form-control br-tl-7 br-bl-7" placeholder="">
 									<div class="input-group-append ">
 										<button type="button" class="btn btn-primary br-tr-7 br-br-7">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -233,19 +234,20 @@
 												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.status}}</td>
 												<td class="text-right text-muted d-none d-md-table-cell text-nowrap">{{item.bloco}}</td>
 												<td class="text-right text-muted d-md-table-cell text-nowrap">
-													<a class="btn btn-success" data-target="#modal-main" data-toggle="modal"><i class="ion-ios7-plus" ></i>Permitir</a>
+													<a class="btn btn-success" data-target="#modal-allow" data-toggle="modal"><i class="ion-ios7-plus" ></i>Permitir</a>
 													<span>&nbsp;</span>
-													<a class="btn btn-warning"><i class="ion-close-circled">Remover</i></a>
 												</td>
 											</tr>
 										</table>
 
-                    <div class="modal show" id="modal-main" style="display: none; padding-right: 5px;" aria-modal="true">
+                    <!-- MODALS ITEMS -->
+
+                    <div class="modal show" style="display: none; padding-right: 5px;" aria-modal="true" v-for="(modal, index) in modals" :key="index" :id="'modal-'+index">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content modal-content-demo">
                           <div class="modal-header">
-                            <h6 class="modal-title">Permitir entrada</h6>
-                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <h6 class="modal-title">{{ modal.title }}</h6>
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button" >
                               <span aria-hidden="true">×</span></button>
                           </div>
                           <div class="modal-body">
@@ -257,10 +259,6 @@
                         </div>
                       </div>
                     </div>
-                    
-                    <div class="text-center py-4 bg-light border">
-                      <a class="btn btn-primary" data-target="#modal-main" data-toggle="modal" href="">View Live Demo</a>
-                    </div><!-- pd-y-30 -->
 										
 									</div>
 									<div class="d-flex p-4 border-top">
