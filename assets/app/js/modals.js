@@ -3,6 +3,7 @@ export const modals = {
     title: 'Permitir acesso'
   },
   add: {
-    title: 'Adicionar pessoas'
+    title: 'Adicionar pessoas',
+    type: 'guest'
   }
 }

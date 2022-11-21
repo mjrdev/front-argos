@@ -25,3 +25,8 @@
   margin: 0;
   gap: 5px;
 }
+
+.modal-add-resident {
+  display: flex;
+  gap: 1rem;
+}

@@ -8,7 +8,7 @@ createApp({
       fields: fields,
       pessoas: peoples,
       search: "",
-      modals,
+      modals
     };
   },
 
